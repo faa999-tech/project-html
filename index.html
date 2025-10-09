@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJIB STORE - VPS, Panel, Script & Jasa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            background-attachment: fixed;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+            z-index: -2;
+            animation: nebulaShift 20s ease-in-out infinite alternate;
+        }
+        @keyframes nebulaShift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(10px, 10px) scale(1.05); }
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+        .star:nth-child(1) { top: 10%; left: 10%; width: 2px; height: 2px; animation-delay: 0s; }
+        .star:nth-child(2) { top: 20%; left: 80%; width: 1px; height: 1px; animation-delay: 0.5s; }
+        .star:nth-child(3) { top: 50%; left: 20%; width: 3px; height: 3px; animation-delay: 1s; }
+        .star:nth-child(4) { top: 70%; left: 70%; width: 1.5px; height: 1.5px; animation-delay: 1.5s; }
+        .star:nth-child(5) { top: 80%; left: 40%; width: 2px; height: 2px; animation-delay: 0.2s; }
+        @keyframes twinkle {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+        }
+        strong {
+            color: #ff6b6b;
+            text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        li:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        .button-tg {
+            background: linear-gradient(45deg, #0088cc, #005f99);
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+        }
+        .button-tg:hover {
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
+        }
+        .order-buttons {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <div class="container">
+        <h1>🌟 MUJIB STORE</h1>
+        
+        <div class="section">
+            <p><strong>⛈️READY VPS DIGITAL OCEAN SPEK PAYPAL⛈️</strong></p>
+            <ul>
+                <li>•📦 RAM 2 CORE 1: 20k</li>
+                <li>•📦 RAM 2 CORE 2: 25K</li>
+                <li>•📦 RAM 4 CORE 2: 30K</li>
+                <li>•📦 RAM 8 CORE 4: 50K</li>
+                <li>•📦 RAM 16 CORE 4: 85K</li>
+                <li>•📦 RAM 16 CORE 8: 100K</li>
+                <li>•📦 RAM 32 CORE 8: 150K</li>
+            </ul>
+            <p>Digital Ocean Fresh Jadi Tahan Lama VPS Nya<br>
+            Bergaransi <br>
+            MAHAL? GW JUAL KUALITAS</p>
+        </div>
+
+        <div class="section">
+            <p><strong>📦BONUSNYA📦:</strong></p>
+            <ul>
+                <li>⭐ Free Request Region/Os/Versi</li>
+                <li>⭐ Free Install Panel</li>
+                <li>⭐ Free Install Tema 16GB</li>
+                <li>⭐ Free Request Domain</li>
+                <li>⭐Free Egg Bot Wa/Tele Tools Versi Terbaru, Minicraft Java/BEDROCK,Samp</li>
+                <li>⭐ Free Sc Cpanel Geser</li>
+                <li>⭐ Full Akses Vps 💯</li>
+                <li>⭐ Terima Jadi</li>
+                <li>⭐ Garansi Ada</li>
+                <li>TIDAK MELANGGAR T.O.S</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p><strong>🌐LIST DIGITAL OCEAN PAYPAL🌐</strong></p>
+            <ul>
+                <li>- 10 DROP (TERBUKA 1GB-32GB) PAYPAL PROMO REAL 150K (PAYPAL) GARANSI 7 HARI</li>
+                <li>● ☁️DIGITAL OCEAN 10 DROP 1 TAHUN 230K</li>
+                <li>● ☁️DIGITAL OCEAN 3 DROP (TERBUKA 1GB-8GB) 2 BULAN <br>PAYPAL 130K GARANSI 3 HARI</li>
+                <li>● ☁️DIGITAL OCEAN 3 DROP 1 TAHUN PAYPAL 200K</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🌐LIST PANEL PTERODACTLY MUJIB STORE 🌐</h2>
+            <p>ADA 3 WEB<br>
+            PT-OWN<br>
+            ADMIN PANEL<br>
+            PRIVAT SERVER<br>
+            MASING MASING DI BEDAKAN WEB SESUAI YANG DI BELI</p>
+            <ul>
+                <li>● Pt Panel Promo 25K
+                <br>Dapat Dua Web Publik Dan Private (Private Untuk Create Panel 1GB-UNLI)</li>
+                <li>● Owner Panel Promo 30K
+                <br>Dapat Dua Web Publik Dan Private (Private Untuk Create Panel 1GB-UNLI)</li>
+                <li>● Reseller Panel Privat Wa/Tele Promo 15K</li>
+                <li>● Admin Panel Promo 20K</li>
+            </ul>
+            <p><strong>📦ALL BONUSNYA📦:</strong><br>
+            Free Script Cpanel Geser<br>
+            Spek Vps 16GB Juga</p>
+        </div>
+
+        <div class="section">
+            <h2>LIST PANEL PTERODACTLY SERVER</h2>
+            <ul>
+                <li>● Bot Wa/Tele</li>
+                <li>● Python</li>
+                <li>● Minecraft Java/Bedrock</li>
+                <li>● Samp</li>
+                <li>● Dll
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📮 LIST PANEL RUN BOT 📮</h2>
+            <ul>
+                <li>● RAM 1GB CPU 30%: 1k</li>
+                <li>● RAM 2GB CPU 50%: 2K</li>
+                <li>● RAM 3GB CPU 70%: 3k</li>
+                <li>● RAM 4GB CPU 90%: 4K</li>
+                <li>● RAM 5GB CPU 100%: 5K</li>
+                <li>● RAM 6GB CPU 120%: 6k</li>
+                <li>● RAM 7GB CPU 140%: 7K</li>
+                <li>● RAM 8GB CPU 160%: 8K</li>
+                <li>● RAM UNLI CPU UNLI%: 10k</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <p><strong>SERVER PRIVAT</strong><br>
+            READY JUGA SERVER LAIN NYA<br>
+            HARGA? CHAT MUJIB</p>
+        </div>
+
+        <div class="section">
+            <h2>🤖LIST SCRIPT WA/TELE /TOOLS 🤖</h2>
+            <p>GRATIS PANEL UNLI RUN BOT</p>
+            <ul>
+                <li>● Tools Spam Notif Wa</li>
+                <li>● Tools DDoS</li>
+                <li>● Script Buy Otomatis Via Wa</li>
+                <li>● Script Buy Otomatis Via Tele</li>
+                <li>● Script Cpanel Wa/Tele</li>
+                <li>● S</li>
+                <li>● Script Button</li>
+                <li>● Script Md</li>
+                <li>● Script DDoS Tele/Wa</li>
+                <li>● Script Store</li>
+                <li>● Script Install Panel</li>
+                <li>● Script Doxing</li>
+                <li>● Script Bug</li>
+                <li>● Script Push Kontak</li>
+                <li>● Script Campuran</li>
+                <li>● Script Pribadi</li>
+                <li>● Edit Script Script</li>
+                <li>● Jadi Bot [REQUEST SC]</li>
+                <li>● Lain Lain Script/Request Script Chat MUJIB STORE</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔥JASA MUJIB STORE🔥</h2>
+            <ul>
+                <li>● Jasa Rekber/Mc</li>
+                <li>● Bug Wa</li>
+                <li>● Suntik All Sosmed</li>
+                <li>● Nokos All Negara</li>
+                <li>● Jasa Convert Saldo</li>
+                <li>● Up Dana Bisnis</li>
+                <li>● Qris No Ktp</li>
+                <li>● Rename Script</li>
+                <li>● Fix Bug</li>
+                <li>● Install Panel</li>
+                <li>● Sewa Bot Install Panel</li>
+                <li>● Install Tema</li>
+                <li>● Hack Back Panel</li>
+                <li>● Reseller Dubdomain</li>
+                <li>● DDoS</li>
+                <li>● Temporary</li>
+                <li>● Banned/Unbanned</li>
+                <li>● Riset Kode Otp</li>
+                <li>● Block Get Contacts/Hapus Tag</li>
+                <li>● VPS/RDP/DO</li>
+                <li>● Jasa Lacak Lokasi/Doxing</li>
+                <li>● Apk SurXrat</li>
+                <li>● Metode Suntik</li>
+                <li>● Metode Ban</li>
+                <li>● Metode Unban</li>
+                <li>● Metode Nokos</li>
+                <li>● Metode Reset Otp</li>
+                <li>● Metode Temporary</li>
+                <li>● Dll Tanya Aja</li>
+            </ul>
+        </div>
+
+        <div class="order-buttons">
+            <a href="https://wa.me/6283117212924" class="button" target="_blank">💬 Chat WhatsApp</a>
+            <a href="https://whatsapp.com/channel/0029VafxnCk9MF8wV4sGvT3i" class="button" target="_blank">📱 Join WhatsApp Channel</a>
+            <a href="https://t.me/mujib Store" class="button button-tg" target="_blank">💬 Chat Telegram</a>
+            <a href="https://t.me/addlist/1L-x-zi4pddjOTc1" class="button button-tg" target="_blank">📱 Join Telegram Room
+        </div>
+    </div>
+</body>
+</html>
