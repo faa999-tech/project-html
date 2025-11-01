@@ -148,23 +148,27 @@
 
             reader.onload = function(e) {
                 const fileContent = e.target.result;
-                // Encode to Base64 (bukan enkripsi)
-                const encoded = btoa(fileContent);
-                
-                // Create a blob for the encoded content
-                const blob = new Blob([encoded], { type: 'text/plain' });
-                const url = URL.createObjectURL(blob);
-                
-                // Set up download button
-                downloadBtn.onclick = () => {
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = file.name + '.encoded';
-                    a.click();
-                };
-                
-                downloadSection.style.display = 'block';
-                alert('File encoded successfully! Click download to save.');
+                try {
+                    // Encode to Base64 dengan handle Unicode
+                    const encoded = btoa(unescape(encodeURIComponent(fileContent)));
+                    
+                    // Create a blob for the encoded content
+                    const blob = new Blob([encoded], { type: 'text/plain' });
+                    const url = URL.createObjectURL(blob);
+                    
+                    // Set up download button
+                    downloadBtn.onclick = () => {
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = file.name + '.encoded';
+                        a.click();
+                    };
+                    
+                    downloadSection.style.display = 'block';
+                    alert('File encoded successfully! Click download to save.');
+                } catch (error) {
+                    alert('Encoding failed: ' + error.message + '. Try a different file.');
+                }
             };
 
             reader.readAsText(file);
